@@ -59,4 +59,154 @@
 
 .add {
     display: none;
+
+    &.open {
+        display: flex;
+
+        & .form-pay {
+            order: 2;
+        }
+
+        & .form-pay.active {
+            order: -1;
+        }
+
+        & .add-total {
+            order: 0;
+        }
+    }
+}
+
+.add-form.open {
+    background: rgba(214, 214, 214, 0.15);
+    border: 1px solid rgba(141, 193, 255, 0.8);
+    border-radius: 20px;
+    padding: 40px 60px;
+
+    & .add-form__item,
+    & .add-show p {
+        display: none;
+    }
+
+    & .add-show {
+        justify-content: center;
+    }
+
+    & .show-forms {
+        font-weight: 600;
+        font-size: 0;
+        text-decoration: underline;
+
+        &::before {
+            content: 'Вести загальну сумму';
+            font-size: 18px;
+            font-family: inherit;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+
+    & ~ .add-sum,
+    & ~  .add-ftotal {
+        display: none;
+    }
+}
+
+.add {
+    flex-direction: column;
+
+    & .pay-subtitle {
+        margin-bottom: 34px;
+    }
+}
+
+.modal-content {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 20px 34px;
+}
+
+.add-modal__title {
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 22px;
+}
+
+.add-modal__body {
+    font-size: 15px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 22px;
+}
+
+.add-modal__footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.add-loading {
+    text-align: center;
+    color: #143D8A;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 40px 0 90px;
+    background: url('../img/wait.svg') no-repeat bottom center;
+}
+
+.add-success {
+    text-align: center;
+    color: #143D8A;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 30px 0 60px;
+    background: url('../img/success.svg') no-repeat bottom center;
+
+    & ~ .button-outline {
+        padding: 9px 30px 10px;
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+    .add-sum, .add__total {
+        font-size: 13px;
+        padding: 20px 5px;
+    }
+
+    .add__total img {
+        max-height: 18px;
+        width: auto;
+    }
+
+    .add-total {
+        margin-bottom: 20px;
+    }
+
+    .add-form.open {
+        padding: 28px 12px;
+    }
+
+    .add-form.open .show-forms::before {
+        font-size: 15px;
+    }
+
+    .add-modal__title {
+        font-size: 14px;
+    }
+
+    .add-modal__body {
+        font-size: 13px;
+    }
+
+    .add-modal__footer button {
+        padding: 7px 35px;
+    }
+
+    .add-success, .add-loading {
+        font-size: 16px;
+    }
 }

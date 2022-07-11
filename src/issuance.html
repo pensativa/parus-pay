@@ -14,7 +14,7 @@
         <div class="container">
             <h1 class="pay-title">ПТ "ЛОМБАРД ПАРУС"</h1>
             <form class="pay-form add-form">
-                <div class="pay-form__item">
+                <div class="pay-form__item add-form__item">
                     <label for="ob">Вкажіть загальну суму добору:</label>
                     <input id="ob" class="input-crm" type="text" value="0">
                 </div>
@@ -26,13 +26,18 @@
             <div class="add-sum">
                 <p>Ви можете добрати від <span class="pay-form__red min">0</span> грн. до <span class="pay-form__red max">990</span> грн.</p>
             </div>
-            <div class="add__total">
+            <div class="add__total add-ftotal">
                 <p class="add-total">Загальна сума добору становить <span>0</span> грн.</p>
-                <button class="button">Добрати</button>
+                <button  type="button" class="button add-button" data-bs-toggle="modal" data-bs-target="#addModal">Добрати</button>
                 <img src="img/fondy.webp" alt="fondy" width="89" height="20">
             </div>
             <div class="add">
                 <h2 class="pay-subtitle">Ваші договори станом на 01/01/2022</h2>
+                <div class="add__total">
+                    <p class="add-total">Загальна сума добору становить <span>0</span> грн.</p>
+                    <button  type="button" class="button add-button" data-bs-toggle="modal" data-bs-target="#addModal">Добрати</button>
+                    <img src="img/fondy.webp" alt="fondy" width="89" height="20">
+                </div>
                 <div class="form-pay">
                     <form class="pay-form">
                         <div class="pay-form__item">
@@ -74,6 +79,22 @@
             </div>
         </div>
 	</main>
+    <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content add-modal__content">
+              <h5 class="add-modal__title" id="addModalLabel">web.pawnexpert.com.ua:8011 повідомлення від сайту</h5>
+            <div class="add-modal__body">
+                На картку <span class="card-number">0000*********0000</span><br>
+                буде зараховано <span class="sum-count">5.00</span> грн.<br>
+                Продовжити операцію?
+            </div>
+            <div class="add-modal__footer">
+                <button type="button" class="button success">Так</button>
+                <button type="button" class="button-outline" data-bs-dismiss="modal">Ні</button>
+            </div>
+          </div>
+        </div>
+    </div>
 	@@include('components/page-blocks/_footer.html')
 	@@include('components/page-blocks/_scripts.html')
 </body>
