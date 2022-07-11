@@ -61,23 +61,6 @@ const activeForm = function() {
 }
 activeForm();
 
-const addSumFunction = function() {
-    const forms = document.querySelectorAll('.add .form-pay');
-    if (!forms) {
-        return;
-    }
-
-    for (let form of forms) {
-        let sum = 0;
-        const checkbox = form.querySelectorAll('.pay-form__checkbox input');
-        if (!checkbox) {
-            return;
-        }
-    }
-
-};
-totalSumFunction();
-
 const showForms = function() {
     const showBtn = document.querySelector('.show-forms');
     const showBlock = document.querySelector('.add');
