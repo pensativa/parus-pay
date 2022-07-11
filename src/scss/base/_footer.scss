@@ -19,3 +19,18 @@
     text-align: center;
     margin-top: 12px;
 }
+
+@media (max-width: 768px) {
+    .footer__link {
+        font-size: 13px;
+    }
+
+    .footer__copyrights {
+        font-size: 12px;
+    }
+
+    .footer img {
+        max-height: 16px;
+        width: auto;
+    }
+}
