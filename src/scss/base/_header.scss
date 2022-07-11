@@ -1,0 +1,55 @@
+.header {
+    padding: 20px 0;
+    background: #FAFAFA;
+
+    &.page {
+      background: #3579C9;
+
+      & .tel {
+        color: #fff;
+      }
+
+      & .header__logo {
+        filter: grayscale(1) contrast(3) invert(1);
+      }
+    }
+}
+
+.header__contacts  {
+    align-items: center;
+}
+
+.tel {
+    font-weight: 600;
+    font-size: 18px;
+    color: $prime-color;
+  
+    &::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      vertical-align: middle;
+      background: url('../img/phone.svg') no-repeat center/contain;
+      margin-right: 12px;
+    }
+  }
+
+  .lang {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #c83138;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    padding: 9px 0;
+    margin-left: 27px;
+    cursor: pointer;
+  
+    &:hover,
+    &:focus {
+      background-color: #ae252c;
+    }
+  }

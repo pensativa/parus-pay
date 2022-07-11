@@ -1,0 +1,156 @@
+.pay-title {
+    text-align: center;
+    margin: 43px 0 19px;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.pay-subtitle {
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    color: #143D8A;
+}
+
+.pay-forms {
+    display: flex;
+    flex-direction: column;
+}
+
+.pay-form {
+    width: 720px;
+    max-width: 100%;
+    border: 1px solid rgba(164, 190, 220, 0.64);
+    border-radius: 20px;
+    margin: 50px auto 20px;
+    padding: 40px 60px 25px;
+}
+
+.form-pay {
+    order: 2;
+    
+    &.active {
+        order: -1;
+
+        & .pay-form {   
+            background: rgba(214, 214, 214, 0.15);
+            border: 1px solid rgba(141, 193, 255, 0.8);
+        }
+
+        & ~ .pay-forms__total {
+            display: block;
+        }
+    }
+
+}
+
+.pay-form__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &:not(:last-child) {
+        margin-bottom: 35px;
+    }
+}
+
+.pay-form__item .input-crm {
+    width: 346px;
+    font-weight: 700;
+    color: #3579C9;
+}
+
+.pay-form__item--acc {
+    text-align: center;
+    display: block;
+    background: rgba(76, 141, 218, 0.09);
+    border: 1px solid rgba(112, 170, 239, 0.38);
+    border-radius: 5px;
+    color: #234D9C;
+    padding: 30px;
+}
+
+.pay-form__red {
+    color: #C83138;
+}
+
+.pay-info {
+    background: rgba(140, 190, 250, 0.25);
+    border: 1px solid rgba(141, 193, 255, 0.8);
+    border-radius: 10px;
+    padding: 30px 50px;
+    color: #C83138;
+    width: 720px;
+    max-width: 100%;
+    margin: 0 auto 20px;
+
+    &.center {
+        color: #184070;
+        text-align: center;
+    }
+
+    & ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    & li {
+        position: relative;
+        padding-left: 26px;
+        margin-bottom: 20px;
+
+        &::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 5px;
+            left: 0;
+            background: #C83138;
+            border-radius: 2px;
+        }
+    }
+}
+
+.pay-forms__total {
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto 100px;
+    order: 1;
+    display: none;
+}
+
+.pay-total {
+    font-weight: 600;
+    color: #184070;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    margin-top: 60px;
+
+    & span {
+        font-weight: 600;
+        font-size: 20px;
+        color: #3169D2;
+    }
+}
+
+.pay-fondy {
+    border-top:  1px solid #DBDBDB;
+    border-bottom:  1px solid #DBDBDB;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 0 39px;
+
+    & p {
+        font-weight: 600;
+        font-size: 24px;
+        color: #0D4689;
+        margin:  30px 0;
+    }
+}
