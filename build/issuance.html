@@ -72,17 +72,22 @@
                     <label for="ob">Вкажіть загальну суму добору:</label>
                     <input id="ob" class="input-crm" type="text" value="0">
                 </div>
-                <div class="pay-form__item pay-form__item--acc">
+                <div class="pay-form__item pay-form__item--acc add-show">
                     <p>Або окремо по договорах:</p>
                     <button class="show-forms">Показати договори</button>
                 </div>
             </form>
-            
-            <div class="pay-form__item pay-form__item--acc">
+            <div class="add-sum">
                 <p>Ви можете добрати від <span class="pay-form__red min">0</span> грн. до <span class="pay-form__red max">990</span> грн.</p>
             </div>
-            <h2 class="pay-subtitle add">Ваші договори станом на 01/01/2022</h2>
-                <div class="form-pay add">
+            <div class="add__total">
+                <p class="add-total">Загальна сума добору становить <span>0</span> грн.</p>
+                <button class="button">Добрати</button>
+                <img src="img/fondy.webp" alt="fondy" width="89" height="20">
+            </div>
+            <div class="add">
+                <h2 class="pay-subtitle">Ваші договори станом на 01/01/2022</h2>
+                <div class="form-pay">
                     <form class="pay-form">
                         <div class="pay-form__item">
                             <label for="n2">Номер договору:</label>
@@ -101,7 +106,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="form-pay add">
+                <div class="form-pay">
                     <form class="pay-form">
                         <div class="pay-form__item">
                             <label for="n3">Номер договору:</label>
@@ -120,14 +125,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="pay-forms__total">
-                    <p class="pay-total">Загальна сума до оплати становить: <span>0 грн.</span></p>
-                    <div class="pay-fondy">
-                        <img src="img/fondy.webp" alt="fondy">
-                        <p>здійснити оплату</p>
-                        <button class="button button--dark">Оплатити онлайн</button>
-                    </div>
-                </div>
+            </div>
         </div>
 	</main>
 	<footer class="footer">
